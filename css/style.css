@@ -8,6 +8,50 @@ main {
   display: flex;
 }
 
+#form-navbar {
+  align-items: center;
+}
+
+#input-search {
+  width: 600px;
+}
+
+#boton-search {
+  color: black;
+  border-color: black;
+}
+
+#boton-search:hover {
+  background-color: white;
+}
+
+#carritoContenedor {
+  border: none;
+  background-color: white;
+  color: black;
+}
+
+#boton-carrito:hover {
+  cursor: pointer;
+}
+
+#boton-vaciar-carrito {
+  color: white;
+  background-color: black;
+  border: none;
+}
+
+#boton-continuar-compra {
+  color: white;
+  background-color: black;
+  border: none;
+}
+
+#boton-cerrar {
+  color: white;
+  background-color: black;
+  border: none;
+}
 main > #container-categorias {
   display: flex;
   flex-direction: column;
@@ -62,17 +106,36 @@ main > #container-categorias {
   background-color: #fce2cd;
 }
 
+.precio-boton > button:hover {
+  background-color: #fcd1ae;
+  transition: 0.5s ease;
+}
+
 .card-Item > img {
   height: 248px;
   width: 248px;
 }
 
+#boton-productos {
+  border: none;
+  background-color: white;
+  font-size: 25px;
+  margin: 0px 30px;
+  color: rgb(52, 52, 52);
+  padding: 5px 0px;
+}
+
+#boton-productos:hover {
+  color: rgb(0, 0, 0);
+}
+
 #container-categorias > ul > li {
+  color: rgb(52, 52, 52);
   list-style: none;
   padding: 5px 0px;
 }
 
-#container-categorias > ul > li > a {
-  text-decoration: none;
-  color: rgb(52, 52, 52);
+#container-categorias > ul > li:hover {
+  color: rgb(0, 0, 0);
+  cursor: pointer;
 }

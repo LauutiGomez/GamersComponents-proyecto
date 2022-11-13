@@ -1,3 +1,4 @@
+// Array general de todos los productos
 let productos = [
     //Stock de Memorias-Ram
     {
@@ -50,262 +51,266 @@ let productos = [
     },
     //STOCK PLACAS DE VIDEO
     {
-        id: 0,
+        id: 6,
         nombre: "Placa De Video GeForce GTX 1650 4Gb Msi Ventus Xs Oc",
         precio: 60000,
         stock: 5,
         img: "../img/placas-de-video/Placa-De-Video-GeForce-GTX-1650-4Gb-Msi-Ventus-Xs-Oc.jpg",
-        categoria: [""]
+        categoria: ["placasDeVideo"]
     },
     {
-        id: 1,
+        id: 7,
         nombre: "Placa De Video GEFORCE GTX 1660 SUPER 6GB MSI VENTUS XS OC",
         precio: 74000,
         stock: 3,
         img: "../img/placas-de-video/Placa-De-Video-GEFORCE-GTX-1660-SUPER-6GB-MSI-VENTUS-XS OC.jpg",
-        categoria: [""]
+        categoria: ["placasDeVideo"]
     },
     {
-        id: 2,
+        id: 8,
         nombre: "Placa De Video EVGA Nvidia Geforce RTX 2060 KO Ultra Gaming 6GB GDDR6",
         precio: 84000,
         stock: 4,
         img: "../img/placas-de-video/Placa-De-Video-EVGA-Nvidia-Geforce-RTX-2060 KO-Ultra-Gaming-6GB-GDDR6.jpg",
-        categoria: [""]
+        categoria: ["placasDeVideo"]
     },
     {
-        id: 3,
+        id: 9,
         nombre: "Placa De Video GeForce RTX 3080 Ti 12Gb Msi Gaming X Trio",
         precio: 400000,
         stock: 2,
         img: "../img/placas-de-video/Placa-De-Video-GeForce-RTX-3080-Ti-12Gb-Msi-Gaming-X-Trio.jpg",
-        categoria: [""]
+        categoria: ["placasDeVideo"]
     },
     {
-        id: 4,
+        id: 10,
         nombre: "Placa De Video GeForce RTX 3090 24Gb Asus Rog Strix Gaming Oc Blanco",
         precio: 500000,
         stock: 1,
         img: "../img/placas-de-video/Placa-De-Video-GeForce-RTX-3090-24Gb-Asus-Ro-Strix-Gaming-Oc-Blanco.jpeg",
-        categoria: [""]
+        categoria: ["placasDeVideo"]
     },
     //Stock de Mothers
     {
-        id: 0,
+        id: 11,
         nombre: "Mother Asrock X570 Steel Legend AM4 PCIe Gen4",
         precio: 43200,
         stock: 3,
         img: "../img/mothers/Mother-Asrock-X570-Steel-Legend-AM4-PCIe-Gen4.jpg",
-        categoria: [""]
+        categoria: ["mothers"]
     },
     {
-        id: 1,
+        id: 12,
         nombre: "Mother Asrock B450 Steel Legend AM4 RGB Dual M.2 Dual USB 3.1",
         precio: 29900,
         stock: 3,
         img: "../img/mothers/Mother-Asrock-B450Steel-Legend-AM4-RGB-Dual-M.2-Dual-USB-3.1.jpg",
-        categoria: [""]
+        categoria: ["mothers"]
     },
     {
-        id: 2,
+        id: 13,
         nombre: "Mother ASUS ROG STRIX B550-F GAMING AM4 PCI-E 4.0",
         precio: 54150,
         stock: 4,
         img: "../img/mothers/Mother-ASUS-ROG-STRIX-B550-F-GAMING-AM4-PCI-E-4.0.jpg",
-        categoria: [""]
+        categoria: ["mothers"]
     },
     {
-        id: 3,
+        id: 14,
         nombre: "Mother Asrock B550 Phantom Gaming ITX/AX",
         precio: 50300,
         stock: 2,
         img: "../img/mothers/Mother-Asrock-B550-Phantom-Gaming-ITX.jpg",
-        categoria: [""]
+        categoria: ["mothers"]
     },
     {
-        id: 4,
+        id: 15,
         nombre: "Mother-ASUS-ROG-STRIX-B450-F-GAMING-II-AM4",
         precio: 41350,
         stock: 1,
         img: "../img/mothers/Mother-ASUS-ROG-STRIX-B450-F-GAMING-II-AM4.jpg",
-        categoria: [""]
+        categoria: ["mothers"]
     },
     //Stock de Gabinetes
     {
-        id: 0,
+        id: 16,
         nombre: "Gabinete Be Quiet! PURE BASE 500DX White",
         precio: 31310,
         stock: 3,
         img: "../img/gabinetes/Gabinete-Be-Quiet!-PURE-BASE-500DX-White.jpg",
-        categoria: [""]
+        categoria: ["gabinetes"]
     },
     {
-        id: 1,
+        id: 17,
         nombre: "Gabinete Corsair Crystal 680X RGB TG Smart White",
         precio: 80450,
         stock: 3,
         img: "../img/gabinetes/Gabinete-Corsair-Crystal-680X-RGB-TG-Smart-White.jpg",
-        categoria: [""]
+        categoria: ["gabinetes"]
     },
     {
-        id: 2,
+        id: 18,
         nombre: "Gabinete Corsair Crystal 465X RGB iCue Smart Black Mid Tower",
         precio: 42950,
         stock: 4,
         img: "../img/gabinetes/Gabinete-Corsair-Crystal-465X-RGB-iCue-Smart-Black-Mid-Tower.jpg",
-        categoria: [""]
+        categoria: ["gabinetes"]
     },
     {
-        id: 3,
+        id: 19,
         nombre: "Gabinete Lian Li O11 Dynamic XL ROG Certify White ARGB",
         precio: 86700,
         stock: 2,
         img: "../img/gabinetes/Gabinete-Lian-Li-O11-Dynamic-XL-ROG-Certify-White-ARGB.jpg",
-        categoria: [""]
+        categoria: ["gabinetes"]
     },
     {
-        id: 4,
+        id: 20,
         nombre: "Gabinete ASUS ROG STRIX GX601 Helios Evangelion Edition ARGB",
         precio: 99000,
         stock: 1,
         img: "../img/gabinetes/Gabinete-ASUS-ROG-STRIX-GX601-Helios-Evangelion-Edition-ARGB.jpg",
-        categoria: [""]
+        categoria: ["gabinetes"]
     },
     //Stock de Fuentes
     {
-        id: 0,
+        id: 21,
         nombre: "Fuente ASUS ROG STRIX 750W 80 Plus Gold Full Modular 750G",
         precio: 27900,
         stock: 3,
         img: "../img/fuentes/Fuente-ASUS-ROG-STRIX-750W-80-Plus-Gold-Full-Modular-750G.jpg",
-        categoria: [""]
+        categoria: ["fuentes"]
     },
     {
-        id: 1,
+        id: 22,
         nombre: "Fuente ASUS ROG THOR 1200W 80 Plus Platinum 1200P Full modular",
         precio: 74050,
         stock: 3,
         img: "../img/fuentes/Fuente-ASUS-ROG-THOR-1200W-80-Plus-Platinum-1200P-Full-modular.jpg",
-        categoria: [""]
+        categoria: ["fuentes"]
     },
     {
-        id: 2,
+        id: 23,
         nombre: "Fuente Be Quiet! 700W 80 Plus Bronze U9",
         precio: 15290,
         stock: 4,
         img: "../img/fuentes/Fuente-Be-Quiet!-700W-80-Plus-Bronze-U9.jpg",
-        categoria: [""]
+        categoria: ["fuentes"]
     },
     {
-        id: 3,
+        id: 24,
         nombre: "Fuente ASUS ROG STRIX 850W 80 Plus Gold Full Modular White 850G",
         precio: 32000,
         stock: 2,
         img: "../img/fuentes/Fuente-ASUS-ROG-STRIX-850W-80-Plus-Gold-Full-Modular-White-850G.jpg",
-        categoria: [""]
+        categoria: ["fuentes"]
     },
     {
-        id: 4,
+        id: 25,
         nombre: "Fuente ASUS ROG THOR 850W 80 Plus Platinum 850P Full modular",
         precio: 49800,
         stock: 1,
         img: "../img/fuentes/Fuente-ASUS-ROG-THOR-850W-80-Plus-Platinum-850P-Full-modular.jpg",
-        categoria: [""]
+        categoria: ["fuentes"]
     },
     //Stock de Procesadores AMD
     {
-        id: 0,
+        id: 26,
         nombre: "Procesador AMD Ryzen 7 5800X 4.7GHz Turbo AM4",
         precio: 72000,
         stock: 3,
         img: "../img/procesadores-amd/Procesador-AMD-Ryzen-7-5800X-4.7GHz-Turbo-AM4.jpg",
-        categoria: [""]
+        categoria: ["procesadoresAmd"]
     },
     {
-        id: 1,
+        id: 27,
         nombre: "Procesador AMD Ryzen 5 5600X 4.6GHz Turbo AM4",
         precio: 51200,
         stock: 3,
         img: "../img/procesadores-amd/Procesador-AMD-Ryzen-5-5600X 4.6GHz-Turbo-AM4.jpg",
-        categoria: [""]
+        categoria: ["procesadoresAmd"]
     },
     {
-        id: 2,
+        id: 28,
         nombre: "Procesador AMD Ryzen 7 5700G 4.6GHz Turbo",
         precio: 65490,
         stock: 4,
         img: "../img/procesadores-amd/Procesador-AMD-Ryzen-7-5700G-4.6GHz-Turbo.jpg",
-        categoria: [""]
+        categoria: ["procesadoresAmd"]
     },
     {
-        id: 3,
+        id: 29,
         nombre: "Procesador AMD Ryzen 5 5500 4.2GHz Turbo",
         precio: 32000,
         stock: 2,
         img: "../img/procesadores-amd/Procesador-AMD-Ryzen-5-5500-4.2GHz-Turbo.jpg",
-        categoria: [""]
+        categoria: ["procesadoresAmd"]
     },
     {
-        id: 4,
+        id: 30,
         nombre: "Procesador AMD Ryzen 5 1600 AF Zen+ 12nm AM4",
         precio: 31150,
         stock: 1,
         img: "../img/procesadores-amd/Procesador-AMD-Ryzen-5-1600 AF Zen-AM4.jpg",
-        categoria: [""]
+        categoria: ["procesadoresAmd"]
     },
     //Stock de Procesadores Intel
     {
-        id: 0,
+        id: 31,
         nombre: "Procesador Intel Core i3 10100 4.3GHz Turbo 10th Gen Socket 1200",
         precio: 25900,
         stock: 3,
         img: "../img/procesadores-intel/Procesador-Intel-Core-i3-10100-4.3GHz-Turbo-10th-Gen-Socket-1200.jpg",
-        categoria: [""]
+        categoria: ["procesadoresIntel"]
     },
     {
-        id: 1,
+        id: 32,
         nombre: "Procesador Intel Core i5 9500 9th Gen LGA1151",
         precio: 51200,
         stock: 3,
         img: "../img/procesadores-intel/Procesador-Intel-Core-i5-9500-9th-Gen-LGA1151.jpg",
-        categoria: [""]
+        categoria: ["procesadoresIntel"]
     },
     {
-        id: 2,
+        id: 33,
         nombre: "Procesador Intel Core i5 12600KF 4.90GHz Turbo Socket 1700",
         precio: 65490,
         stock: 4,
         img: "../img/procesadores-intel/Procesador-Intel-Core-i5-12600KF-4.90GHz-Turbo-Socket-1700.jpg",
-        categoria: [""]
+        categoria: ["procesadoresIntel"]
     },
     {
-        id: 3,
+        id: 34,
         nombre: "Procesador Intel Core i7 12700F 4.9GHz Turbo Socket 1700",
         precio: 81500,
         stock: 2,
         img: "../img/procesadores-intel/Procesador-Intel-Core-i7-12700F-4.9GHz-Turbo-Socket-1700.jpg",
-        categoria: [""]
+        categoria: ["procesadoresIntel"]
     },
     {
-        id: 4,
+        id: 35,
         nombre: "Procesador Intel Core i9 12900K 5.2GHz Turbo Socket 1700",
         precio: 169550,
         stock: 1,
         img: "../img/procesadores-intel/Procesador-Intel-Core-i9-12900K-5.2GHz-Turbo-Socket-1700.jpg",
-        categoria: [""]
+        categoria: ["procesadoresIntel"]
     },
 ];
 
+//array del carrito
+let carrito = []
+
+//funcion general para renderizar productos
 const renderProducts = (productsRendered) => {
     const containerProductos = document.getElementById("container-productos");
-
+    containerProductos.innerHTML = ''
     productsRendered.map((producto) => {
         let cardProduct = document.createElement("div");
         cardProduct.className = "card-Item";
         cardProduct.innerHTML = `
     <h3>${producto.nombre}</h3>
     <div class="precio-boton"><p>$${producto.precio}</p>
-    <br><button>Comprar</button></div>
+    <br><button id=${producto.id} class="boton-comprar">Comprar</button></div>
     <img src="${producto.img}">`;
 
         containerProductos.appendChild(cardProduct);
@@ -314,24 +319,121 @@ const renderProducts = (productsRendered) => {
 
 renderProducts(productos)
 
-const containerCategorias = document.getElementById("container-categorias")
-containerCategorias.innerHTML = `
-<h3>Productos</h3>
-<ul>
-<li><a href="" id="filter-memorias">Memorias ram</a></li>
-<li><a href="" id="filter-mothers">Mothers</a></li>
-<li><a href="" id="filter-gabinetes">Gabinetes</a></li>
-<li><a href="" id="filter-fuentes">Fuentes</a></li>
-<li><a href="" id="filter-procesadores-amd">Procesadores AMD</a></li>
-<li><a href="" id="filter-procesadores-intel">Procesadores Intel</a></li>
-</ul>`
+//funcion boton productos para renderizar todos los productos de nuevo
+const botonProductos = document.getElementById("boton-productos")
+botonProductos.addEventListener("click", productosGenerales)
 
-const botonFilterMemoria = document.getElementById("filter-memorias")
+function productosGenerales() {
+    renderProducts(productos)
+}
+
+//Filtrado de productos por categoria
 const memoriasRam = productos.filter((producto) => producto.categoria.includes("memoriasRam"))
+const placasDeVideo = productos.filter((producto) => producto.categoria.includes("placasDeVideo"))
+const mothers = productos.filter((producto) => producto.categoria.includes("mothers"))
+const gabinetes = productos.filter((producto) => producto.categoria.includes("gabinetes"))
+const fuentes = productos.filter((producto) => producto.categoria.includes("fuentes"))
+const procesadoresAmd = productos.filter((producto) => producto.categoria.includes("procesadoresAmd"))
+const procesadoresIntel = productos.filter((producto) => producto.categoria.includes("procesadoresIntel"))
+
+// boton filtrado de Memorias Ram
+const botonFilterMemoria = document.getElementById("filter-memorias")
 botonFilterMemoria.addEventListener("click", respuestaClick)
 
-
 function respuestaClick() {
-    console.log(memoriasRam)
     renderProducts(memoriasRam)
+}
+
+// boton filtrado de Placas de video
+const botonFilterPlacasDeVideo = document.getElementById("filter-placas-de-video")
+botonFilterPlacasDeVideo.addEventListener("click", respuestaBotonPlacas)
+
+function respuestaBotonPlacas() {
+    renderProducts(placasDeVideo)
+}
+// boton filtrado de Mothers
+const botonFilterMothers = document.getElementById("filter-mothers")
+botonFilterMothers.addEventListener("click", respuestaBotonMothers)
+
+function respuestaBotonMothers() {
+    renderProducts(mothers)
+}
+// boton filtrado de Gabinetes
+const botonFilterGabinetes = document.getElementById("filter-gabinetes")
+botonFilterGabinetes.addEventListener("click", respuestaBotonGabinetes)
+
+function respuestaBotonGabinetes() {
+    renderProducts(gabinetes)
+}
+// boton filtrado de Fuentes
+const botonFilterFuentes = document.getElementById("filter-fuentes")
+botonFilterFuentes.addEventListener("click", respuestaBotonFuentes)
+
+function respuestaBotonFuentes() {
+    renderProducts(fuentes)
+}
+// boton filtrado de Procesador AMD
+const botonFilterProcesadorAmd = document.getElementById("filter-procesadores-amd")
+botonFilterProcesadorAmd.addEventListener("click", respuestaBotonProcesadoresAmd)
+
+function respuestaBotonProcesadoresAmd() {
+    renderProducts(procesadoresAmd)
+}
+// boton filtrado de Procesador Intel
+const botonFilterProcesadorIntel = document.getElementById("filter-procesadores-intel")
+botonFilterProcesadorIntel.addEventListener("click", respuestaBotonProcesadoresIntel)
+
+function respuestaBotonProcesadoresIntel() {
+    renderProducts(procesadoresIntel)
+}
+
+//capturando el contenedor del modal
+const modalContainer = document.getElementById("modal-container")
+
+//funcionabilidad para ver el carrito
+const verCarrito = document.getElementById("carrito")
+verCarrito.addEventListener("click", () => {
+    const modalHeader = document.createElement("div");
+    modalHeader.className = "modal-header"
+    modalHeader.innerHTML = `
+    <h2 class="modal-header-title">Carrito</h2>`
+
+    modalContainer.appendChild(modalHeader)
+
+    const modalButton = document.createElement("h1")
+    modalButton.className = "modal-header-button"
+    modalButton.innerHTML = "X"
+
+    modalHeader.appendChild(modalButton)
+
+    carrito.forEach((productos) => {
+        let carritoContent = document.createComment("div")
+        carritoContent.className = "modal-content"
+        carritoContent.innerHTML = `
+        <img src="${productos.img}">
+        <h3>${productos.nombre}</h3>
+        <p>${productos.precio}</p>
+        `
+        modalContainer.appendChild(carritoContent)
+
+        console.log(carrito)
+    })
+
+    const total = carrito.reduce((acc, el) => acc + el.precio, 0)
+
+    const totalCompra = document.createElement("div")
+    totalCompra.className = "tota-content"
+    totalCompra.innerHTML = `
+    total a pagar: $${total}`
+    modalContainer.appendChild(totalCompra)
+})
+
+
+//funcion para el boton comprar y que lo agregue al carrito
+let botonComprar = document.getElementsByClassName("boton-comprar")
+for (const boton of botonComprar) {
+    boton.onclick = (event) => {
+        let productoComprar = productos.find(producto => producto.id == event.target.id)
+        carrito.push(productoComprar)
+    }
 }
