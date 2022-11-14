@@ -300,6 +300,43 @@ let productos = [
 //array del carrito
 let carrito = []
 
+document.addEventListener('DOMContentLoaded', () => {
+    carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    sumElementCarrito()
+});
+
+const addToCarrito = (prod) => {
+    let dataCarrito;
+    const existData = carrito.find(data => data.id === prod.id)
+
+    if (existData && existData.cantidad >= existData.stock) {
+        window.alert("No hay suficiente stock")
+        return
+    }
+
+    if (existData) {
+        carrito.pop(existData)
+        dataCarrito = {
+            ...existData,
+            cantidad: existData.cantidad + 1
+        }
+    } else {
+        dataCarrito = {
+            ...prod,
+            cantidad: 1
+        }
+    }
+    carrito.push(dataCarrito)
+    window.localStorage.setItem("carrito", JSON.stringify(carrito))
+    sumElementCarrito()
+}
+
+const sumElementCarrito = () => {
+    const cantCarrito = document.getElementById("carritoContenedor")
+    const cantElementInCarrito = JSON.parse(window.localStorage.getItem("carrito"))
+    cantCarrito.innerHTML = `${cantElementInCarrito?.length ? cantElementInCarrito.length : 0}`
+}
+
 //funcion general para renderizar productos
 const renderProducts = (productsRendered) => {
     const containerProductos = document.getElementById("container-productos");
@@ -314,6 +351,8 @@ const renderProducts = (productsRendered) => {
     <img src="${producto.img}">`;
 
         containerProductos.appendChild(cardProduct);
+        const element = document.getElementById(`${producto.id}`)
+        element.addEventListener("click", () => addToCarrito(producto))
     });
 }
 
@@ -387,53 +426,39 @@ function respuestaBotonProcesadoresIntel() {
     renderProducts(procesadoresIntel)
 }
 
-//capturando el contenedor del modal
-const modalContainer = document.getElementById("modal-container")
-
-//funcionabilidad para ver el carrito
-const verCarrito = document.getElementById("carrito")
-verCarrito.addEventListener("click", () => {
-    const modalHeader = document.createElement("div");
-    modalHeader.className = "modal-header"
-    modalHeader.innerHTML = `
-    <h2 class="modal-header-title">Carrito</h2>`
-
-    modalContainer.appendChild(modalHeader)
-
-    const modalButton = document.createElement("h1")
-    modalButton.className = "modal-header-button"
-    modalButton.innerHTML = "X"
-
-    modalHeader.appendChild(modalButton)
-
-    carrito.forEach((productos) => {
-        let carritoContent = document.createComment("div")
-        carritoContent.className = "modal-content"
-        carritoContent.innerHTML = `
-        <img src="${productos.img}">
-        <h3>${productos.nombre}</h3>
-        <p>${productos.precio}</p>
-        `
-        modalContainer.appendChild(carritoContent)
-
-        console.log(carrito)
+const renderElementCarrito = () => {
+    const storageCarrito = JSON.parse(window.localStorage.carrito);
+    const containerProductos = document.getElementById("container-modal");
+    containerProductos.innerHTML = ''
+    storageCarrito.map((producto) => {
+        let cardProduct = document.createElement("div");
+        cardProduct.className = "card-Item";
+        cardProduct.innerHTML = `
+    <h3>${producto.nombre}</h3>
+    <div class="precio-boton">
+    <p>$${producto.precio}</p>
+    <p>cantidad a comprar: ${producto.cantidad} </p>
+    </div>
+    <img src="${producto.img}">`;
+        containerProductos.appendChild(cardProduct);
     })
-
-    const total = carrito.reduce((acc, el) => acc + el.precio, 0)
-
-    const totalCompra = document.createElement("div")
-    totalCompra.className = "tota-content"
-    totalCompra.innerHTML = `
-    total a pagar: $${total}`
-    modalContainer.appendChild(totalCompra)
-})
-
-
-//funcion para el boton comprar y que lo agregue al carrito
-let botonComprar = document.getElementsByClassName("boton-comprar")
-for (const boton of botonComprar) {
-    boton.onclick = (event) => {
-        let productoComprar = productos.find(producto => producto.id == event.target.id)
-        carrito.push(productoComprar)
-    }
 }
+
+const cleanDOMCarrito = () => {
+    const containerProductos = document.getElementById("container-modal");
+    containerProductos.innerHTML = ''
+}
+
+const clearStorageCarrito = () => {
+    carrito = []
+    window.localStorage.clear()
+    cleanDOMCarrito()
+    sumElementCarrito()
+}
+
+
+const buttonCarro = document.getElementById("carritoContenedor")
+buttonCarro.addEventListener("click", renderElementCarrito)
+
+const vaciarCarrito = document.getElementById("boton-vaciar-carrito")
+vaciarCarrito.addEventListener("click", clearStorageCarrito)
