@@ -43,6 +43,9 @@ function general(productos) {
         }
         carrito.push(dataCarrito)
         window.localStorage.setItem("carrito", JSON.stringify(carrito))
+
+        const sumTotal = carrito.reduce((acc, currentV) => acc + currentV.precio * currentV.cantidad, 0)
+        window.localStorage.setItem("sumTotal", JSON.stringify(sumTotal))
         sumElementCarrito()
 
         const Toast = Swal.mixin({
@@ -65,6 +68,7 @@ function general(productos) {
 
     const sumElementCarrito = () => {
         const cantCarrito = document.getElementById("carritoContenedor")
+        document.getElementById('precioTotal').innerHTML = JSON.parse(window.localStorage.getItem("sumTotal"))
         const cantElementInCarrito = JSON.parse(window.localStorage.getItem("carrito"))
         cantCarrito.innerHTML = `${cantElementInCarrito?.length ? cantElementInCarrito.length : 0}`
     }
