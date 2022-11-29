@@ -1,5 +1,4 @@
 // pegada al json que trae el array general de todos los productos
-// let productos = []
 const productosJson = async () => {
     const response = await fetch('./json/productos.json')
     const productos = await response.json()
@@ -119,10 +118,10 @@ function general(productos) {
                 let cardProduct = document.createElement("div");
                 cardProduct.className = "card-Item";
                 cardProduct.innerHTML = `
-        <h3>${producto.nombre}</h3>
-        <div class="precio-boton"><p>$${producto.precio}</p>
-        <br><button id=${producto.id} class="boton-comprar">Comprar</button></div>
-        <img src="${producto.img}">`;
+            <h3>${producto.nombre}</h3>
+            <div class="precio-boton"><p>$${producto.precio}</p>
+            <br><button id=${producto.id} class="boton-comprar">Comprar</button></div>
+            <img src="${producto.img}">`;
 
                 containerProductos.appendChild(cardProduct);
                 const element = document.getElementById(`${producto.id}`)
@@ -234,4 +233,15 @@ function general(productos) {
 
     const vaciarCarrito = document.getElementById("boton-vaciar-carrito")
     vaciarCarrito.addEventListener("click", clearStorageCarrito)
+
+    const botonSubmitFooter = document.getElementById("boton-submit-footer")
+    botonSubmitFooter.addEventListener("click", registrarMailOfertas)
+
+    function registrarMailOfertas() {
+        window.Swal.fire({
+            icon: 'success',
+            title: 'Se registro correctamente',
+            confirmButtonColor: '#000000',
+        })
+    }
 }

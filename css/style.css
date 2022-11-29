@@ -191,7 +191,6 @@ main {
 }
 
 .divs-footers > h4 {
-  text-align: center;
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -212,6 +211,10 @@ main {
   text-decoration: none;
 }
 
+#h4-de-seguinos {
+  padding-left: 10px;
+}
+
 .link-redes {
   margin: 0px 10px;
 }
@@ -222,4 +225,15 @@ main {
 
 .link-redes:hover {
   color: white;
+}
+
+#ofertas-novedades {
+  padding-bottom: 0px;
+}
+
+#boton-submit-footer {
+  margin-top: 15px;
+  background-color: white;
+  color: #252525;
+  border: none;
 }
