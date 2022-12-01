@@ -77,13 +77,19 @@ function general(productos) {
         const containerProductos = document.getElementById("container-productos");
         containerProductos.innerHTML = ''
         productsRendered.map((producto) => {
+            const {
+                id,
+                nombre,
+                precio,
+                img,
+            } = producto
             let cardProduct = document.createElement("div");
             cardProduct.className = "card-Item";
             cardProduct.innerHTML = `
-                <h3>${producto.nombre}</h3>
-                <div class="precio-boton"><p>$${producto.precio}</p>
-                <br><button id=${producto.id} class="boton-comprar">Comprar</button></div>
-                <img src="${producto.img}">`;
+                <h3>${nombre}</h3>
+                <div class="precio-boton"><p>$${precio}</p>
+                <br><button id=${id} class="boton-comprar">Comprar</button></div>
+                <img src="${img}">`;
 
             containerProductos.appendChild(cardProduct);
             const element = document.getElementById(`${producto.id}`)
@@ -114,14 +120,19 @@ function general(productos) {
             let nombre = producto.nombre.toLocaleLowerCase()
 
             if (nombre.indexOf(textoIngresado) !== -1) {
-
+                const {
+                    id,
+                    nombre,
+                    precio,
+                    img,
+                } = producto
                 let cardProduct = document.createElement("div");
                 cardProduct.className = "card-Item";
                 cardProduct.innerHTML = `
-            <h3>${producto.nombre}</h3>
-            <div class="precio-boton"><p>$${producto.precio}</p>
-            <br><button id=${producto.id} class="boton-comprar">Comprar</button></div>
-            <img src="${producto.img}">`;
+                <h3>${nombre}</h3>
+                <div class="precio-boton"><p>$${precio}</p>
+                <br><button id=${id} class="boton-comprar">Comprar</button></div>
+                <img src="${img}">`;
 
                 containerProductos.appendChild(cardProduct);
                 const element = document.getElementById(`${producto.id}`)
@@ -130,7 +141,12 @@ function general(productos) {
         }
         if (containerProductos.innerHTML === '') {
             containerProductos.innerHTML = `
-        <span>No se encontraron productos...</span>`
+                <span>No se encontraron productos...</span>`
+            window.Swal.fire({
+                icon: 'error',
+                title: 'No se encontro el producto',
+                confirmButtonColor: '#000000',
+            })
         }
 
         e.preventDefault();
@@ -202,15 +218,22 @@ function general(productos) {
         const containerProductos = document.getElementById("container-modal");
         containerProductos.innerHTML = ''
         storageCarrito.map((producto) => {
+            const {
+                id,
+                nombre,
+                precio,
+                cantidad,
+                img,
+            } = producto
             let cardProduct = document.createElement("div");
             cardProduct.className = "card-Item";
             cardProduct.innerHTML = `
-    <h3>${producto.nombre}</h3>
-    <div class="precio-boton">
-    <p>$${producto.precio}</p>
-    <p>cantidad a comprar: ${producto.cantidad} </p>
-    </div>
-    <img src="${producto.img}">`;
+            <h3>${nombre}</h3>
+            <div class="precio-boton">
+            <p>$${precio}</p>
+            <p>cantidad a comprar: ${cantidad} </p>
+            </div>
+            <img src="${img}">`;
             containerProductos.appendChild(cardProduct);
         })
     }

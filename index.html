@@ -75,23 +75,75 @@
 
     <div id="linea-rgb"></div>
 
-    <section id="section-categorias">
-        <!-- Container de las categorias de productos -->
-        <div id="container-categorias">
-            <ul>
-                <a id="boton-productos" class="botones-productos" href="#container-productos">Productos</a>
-                <a class="botones-productos" id="filter-memorias" href="#container-productos">Memorias Ram</a>
-                <a class="botones-productos" id="filter-placas-de-video" href="#container-productos">Placas de Video</a>
-                <a class="botones-productos" id="filter-mothers" href="#container-productos">Mothers</a>
-                <a class="botones-productos" id="filter-gabinetes" href="#container-productos">Gabinetes</a>
-                <a class="botones-productos" id="filter-fuentes" href="#container-productos">Fuentes</a>
-                <a class="botones-productos" id="filter-procesadores-amd" href="#container-productos">Procesadores
-                    AMD</a>
-                <a class="botones-productos" id="filter-procesadores-intel" href="#container-productos">Procesadores
-                    Intel</a>
-            </ul>
-        </div>
-    </section>
+    <!-- Container de las categorias de productos -->
+    <div id="container-categorias">
+        <ul class="menu">
+            <li><a id="boton-productos" class="botones-productos" href="#container-productos">Productos</a></li>
+            <li><a class="botones-productos" id="filter-memorias" href="#container-productos">
+                    <span>Memorias Ram</span>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                            class="bi bi-memory" viewBox="0 0 16 16">
+                            <path
+                                d="M1 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.586a1 1 0 0 0 .707-.293l.353-.353a.5.5 0 0 1 .708 0l.353.353a1 1 0 0 0 .707.293H15a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H1Zm.5 1h3a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5Zm5 0h3a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5Zm4.5.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-4ZM2 10v2H1v-2h1Zm2 0v2H3v-2h1Zm2 0v2H5v-2h1Zm3 0v2H8v-2h1Zm2 0v2h-1v-2h1Zm2 0v2h-1v-2h1Zm2 0v2h-1v-2h1Z" />
+                        </svg>
+                    </span>
+                </a>
+            </li>
+            <li><a class="botones-productos" id="filter-placas-de-video" href="#container-productos">
+                    <span>Placas de Video</span>
+                    <span><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                            class="bi bi-gpu-card" viewBox="0 0 16 16">
+                            <path
+                                d="M4 8a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm7.5-1.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z" />
+                            <path
+                                d="M0 1.5A.5.5 0 0 1 .5 1h1a.5.5 0 0 1 .5.5V4h13.5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5H2v2.5a.5.5 0 0 1-1 0V2H.5a.5.5 0 0 1-.5-.5Zm5.5 4a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5ZM9 8a2.5 2.5 0 1 0 5 0 2.5 2.5 0 0 0-5 0Z" />
+                            <path
+                                d="M3 12.5h3.5v1a.5.5 0 0 1-.5.5H3.5a.5.5 0 0 1-.5-.5v-1Zm4 1v-1h4v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5Z" />
+                        </svg></span>
+                </a>
+            </li>
+            <li><a class="botones-productos" id="filter-mothers" href="#container-productos">
+                    <span>Mothers</span>
+                    <span><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                            class="bi bi-motherboard" viewBox="0 0 16 16">
+                            <path
+                                d="M11.5 2a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5Zm2 0a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5Zm-10 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1h-6Zm0 2a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1h-6ZM5 3a1 1 0 0 0-1 1h-.5a.5.5 0 0 0 0 1H4v1h-.5a.5.5 0 0 0 0 1H4a1 1 0 0 0 1 1v.5a.5.5 0 0 0 1 0V8h1v.5a.5.5 0 0 0 1 0V8a1 1 0 0 0 1-1h.5a.5.5 0 0 0 0-1H9V5h.5a.5.5 0 0 0 0-1H9a1 1 0 0 0-1-1v-.5a.5.5 0 0 0-1 0V3H6v-.5a.5.5 0 0 0-1 0V3Zm0 1h3v3H5V4Zm6.5 7a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-2Z" />
+                            <path
+                                d="M1 2a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-2H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 9H1V8H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6H1V5H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 2H1Zm1 11a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v11Z" />
+                        </svg></span>
+                </a>
+            </li>
+            <li><a class="botones-productos" id="filter-gabinetes" href="#container-productos"><span>Gabinetes</span>
+                    <span><img src="./img/iconos-container-categorias/gabinete.png" alt="icono de gabinete"
+                            class="icono-gabinete"></span>
+                </a>
+            </li>
+            <li><a class="botones-productos" id="filter-fuentes" href="#container-productos"><span>Fuentes</span>
+                    <span><img src="./img/iconos-container-categorias/font.png" alt="icono de fuente"
+                            class="icono-fuente"></span>
+                </a>
+            </li>
+            <li><a class="botones-productos" id="filter-procesadores-amd" href="#container-productos">
+                    <span>Procesadores
+                        AMD </span>
+                    <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                            class="bi bi-amd" viewBox="0 0 16 16">
+                            <path
+                                d="m.334 0 4.358 4.359h7.15v7.15l4.358 4.358V0H.334ZM.2 9.72l4.487-4.488v6.281h6.28L6.48 16H.2V9.72Z" />
+                        </svg></span>
+                </a>
+            </li>
+            <li><a class="botones-productos" id="filter-procesadores-intel" href="#container-productos">
+                    <span>Procesadores
+                        Intel</span>
+                    <span><img src="./img/iconos-container-categorias/intel.png" alt="icono de intel"
+                            class="icono-intel"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
 
     <section id="carrousel">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -180,10 +232,6 @@
                         placeholder="Enter email">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
                         else.</small>
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                 </div>
                 <button id="boton-submit-footer" type="submit" class="btn btn-primary">Submit</button>
             </div>

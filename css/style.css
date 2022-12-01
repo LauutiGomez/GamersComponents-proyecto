@@ -97,23 +97,86 @@ main {
   }
 }
 
-#container-categorias > ul {
+#container-categorias {
+  background-color: #252525;
+  box-shadow: 0 10px 10px rgb(0 0 0 / 60%) inset;
   display: flex;
-  align-items: center;
   justify-content: center;
-  align-content: center;
-  margin: 15px 0px;
 }
 
-#container-categorias > ul > a {
-  margin: 0px 30px;
-  color: rgb(52, 52, 52);
+.menu {
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.menu > li > a {
   text-decoration: none;
 }
 
-#container-categorias > ul > li:hover {
-  color: rgb(0, 0, 0);
-  cursor: pointer;
+#container-categorias > ul > li > a {
+  text-decoration: none;
+  padding: 10px 60px;
+  color: rgb(255, 255, 255);
+}
+#container-categorias > ul {
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+#container-categorias > ul > li {
+  display: inline-block;
+}
+
+#container-categorias .menu {
+  display: flex;
+  justify-content: center;
+}
+.menu a span:first-child {
+  display: inline-block;
+  padding: 10px;
+}
+.menu a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu a span:last-child {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-100%);
+}
+.menu a span {
+  transition: transform 0.2s ease-out;
+}
+
+.menu a:hover span:first-child {
+  transform: translateY(100%);
+}
+
+.menu a:hover span:last-child {
+  transform: none;
+}
+
+.menu #boton-productos {
+  position: relative;
+}
+
+.icono-intel,
+.icono-fuente,
+.icono-gabinete {
+  width: 40px;
+  height: 40px;
+  color: white;
 }
 
 #container-productos {
