@@ -257,14 +257,23 @@ function general(productos) {
     const vaciarCarrito = document.getElementById("boton-vaciar-carrito")
     vaciarCarrito.addEventListener("click", clearStorageCarrito)
 
+    const inputFooter = document.getElementById("exampleInputEmail1")
     const botonSubmitFooter = document.getElementById("boton-submit-footer")
     botonSubmitFooter.addEventListener("click", registrarMailOfertas)
 
     function registrarMailOfertas() {
-        window.Swal.fire({
-            icon: 'success',
-            title: 'Se registro correctamente',
-            confirmButtonColor: '#000000',
-        })
+        if (/^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/.test(inputFooter.value)) {
+            window.Swal.fire({
+                icon: 'success',
+                title: 'Se registro correctamente',
+                confirmButtonColor: '#000000',
+            })
+        } else {
+            window.Swal.fire({
+                icon: 'error',
+                title: 'No has ingresado ningun mail',
+                confirmButtonColor: '#000000',
+            })
+        }
     }
 }
